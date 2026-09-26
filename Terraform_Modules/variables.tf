@@ -15,3 +15,15 @@ variable "vpc_cidr" {
   type        = string
   default     = "10.0.0.0/16"
 }
+
+variable "subnet_name" {
+  description = "Name of subnet"
+  type        = string
+  default     = "terraform-public-subnet"
+}
+
+variable "subnet_cidr" {
+  description = "CIDR block for subnet"
+  type        = string
+  default     = "10.0.1.0/24"
+}
