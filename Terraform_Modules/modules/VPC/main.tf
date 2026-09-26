@@ -1,6 +1,16 @@
-module "vpc" {
-  source = "./modules/VPC"
+resource "aws_vpc" "main" {
+  cidr_block = var.vpc_cidr
 
-  vpc_name = var.vpc_name
-  vpc_cidr = var.vpc_cidr
+  tags = {
+    Name = var.vpc_name
+  }
+}
+
+resource "aws_subnet" "public" {
+  vpc_id     = aws_vpc.main.id
+  cidr_block = var.subnet_cidr
+
+  tags = {
+    Name = var.subnet_name
+  }
 }
