@@ -1,7 +1,6 @@
-resource "aws_vpc" "main" {
-  cidr_block = var.vpc_cidr
+module "vpc" {
+  source = "./modules/VPC"
 
-  tags = {
-    Name = var.vpc_name
-  }
+  vpc_name = var.vpc_name
+  vpc_cidr = var.vpc_cidr
 }
