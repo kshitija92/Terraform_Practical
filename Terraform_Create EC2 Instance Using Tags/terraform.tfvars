@@ -3,5 +3,5 @@ instance_type = "t3.micro"
 key_name      = "my-key"
 subnet_id     = "subnet-08e605ce357127a8c"
 
-instance_name = "Terraform-Modules"
+instance_name = "Terraform-Tags"
 environment   = "Dev"
